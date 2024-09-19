@@ -1,0 +1,175 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: Arial, sans-serif;
+}
+
+/* Video container to hold the video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: -1; /* Behind the content */
+    overflow: hidden;
+}
+
+.cover-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures video covers the full screen without distortion */
+}
+
+/* Content overlay */
+.content {
+    position: absolute; /* Absolute positioning to cover the full viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+    justify-content: center; /* Center align the content vertically */
+}
+
+/* General styling */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white; /* Make title text visible over video */
+}
+
+/* Card Container (CSS Grid Layout) */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Card */
+.card {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background to see video */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Menu Dots (Vertical Alignment) */
+.menu-dots {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 4px;
+    height: 16px;
+}
+
+.menu-dots::before,
+.menu-dots::after,
+.menu-dots div {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50%;
+    display: block;
+}
+
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile img {
+    border-radius: 40%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.details h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.details p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Appointment Info */
+.appointment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appointment-info p {
+    margin: 0;
+}
+
+.consult-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.consult-btn:hover {
+    background-color: #218838;
+}
+
+#title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 44px;
+    text-shadow: 4px 4px 20px orange;
+
+}
